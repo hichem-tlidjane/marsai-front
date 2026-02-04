@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaArrowRight, FaPlay } from 'react-icons/fa';
 
-// Je crée des fausses données pour simuler 3 films
 const films = [
   {
     id: 1,
