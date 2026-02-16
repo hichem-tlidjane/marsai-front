@@ -23,7 +23,7 @@ function MovieSubmitDeclaration({ form }) {
         <p>{t(target + 'isHybrid.title')}</p>
         <div className="flex flex-row justify-around gap-3 w-full">
           <label
-            className="flex items-center justify-center h-24 border border-gray rounded-sm has-checked:bg-secondary has-checked:text-white has-checked:border-accent w-1/2 p-1 "
+            className="flex items-center justify-center h-24 border border-gray rounded-sm cursor-pointer has-checked:bg-secondary has-checked:text-white has-checked:border-accent w-1/2 p-1 "
             htmlFor="form-full-ai"
           >
             {t(target + 'isHybrid.false.0')}
@@ -41,7 +41,7 @@ function MovieSubmitDeclaration({ form }) {
             ></input>
           </label>
           <label
-            className="flex items-center justify-center h-24 border border-gray rounded-sm has-checked:bg-secondary has-checked:text-white has-checked:border-accent w-1/2 p-1 "
+            className="flex items-center justify-center h-24 border border-gray rounded-sm cursor-pointer has-checked:bg-secondary has-checked:text-white has-checked:border-accent w-1/2 p-1 "
             htmlFor="form-hybrid"
           >
             {t(target + 'isHybrid.true.0')}

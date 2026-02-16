@@ -9,10 +9,8 @@ function FormTextArea({
   title,
   form,
   validation,
-  // register,
   name,
   className = '',
-  // required = false
 }) {
   if (!validation) {
     validation = { required: false };
@@ -37,7 +35,6 @@ function FormTextArea({
         </p>
       </div>
       <textarea
-        // className="border border-gray rounded-sm p-3 h-36 md:h-44"
         className="outline-2 outline-neutral-400 rounded-sm p-3 h-36 md:h-44 border-0 focus:outline-neutral-100"
         id={id}
         type="textarea"

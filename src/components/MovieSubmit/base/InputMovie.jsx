@@ -4,23 +4,34 @@ import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';
 
-function InputMovie({ form }) {
+function InputMovie({
+  id,
+  name,
+  form,
+  description,
+  subDescription,
+  validation = false,
+}) {
   const { t } = useTranslation();
   const target = 'submitMovieForm.deliverables.video.';
-  const errors = 'submitMovieForm.formErrors.';
+
 
   const [preview, setPreview] = useState(null);
   const { register, resetField } = form;
+
+  if (!validation) {
+    validation = { required: false };
+  }
+
 
   const {
     onChange: onFormChange,
     onBlur,
     ref,
-  } = register('video', { required: t(errors + 'required') });
+  } = register('video', validation);
 
   function handlePreview(e) {
     onFormChange(e);
-    console.log(e);
     const file = e.target.files[0];
     if (file) {
       const objectUrl = URL.createObjectURL(file);
@@ -67,17 +78,17 @@ function InputMovie({ form }) {
             <div className="flex flex-col items-center ">
               <BiCameraMovie size={80} />
               <p className="uppercase text-zinc-200 font-bold mt-2 text-center">
-                Cliquez pour upload
+                {description}
               </p>
               <p className="py-2 px-4 bg-zinc-700 text-zinc-200 rounded-3xl text-sm mt-2 text-center">
-                MP4 ou MKV • Max 500Mo
+                {subDescription}
               </p>
             </div>
             <input
               className="sr-only"
               type="file"
-              id="form-movie-upload"
-              name="video"
+              id={id}
+              name={name}
               ref={ref}
               onBlur={onBlur}
               onChange={handlePreview}

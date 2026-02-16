@@ -14,7 +14,14 @@ function MovieSubmitDeliverables({ form }) {
       <FormSectionTitle text={t(target + 'title')} />
 
       <div className="flex flex-col gap-2 w-full">
-        <InputMovie form={form} />
+        <InputMovie
+          id="form-movie-upload"
+          name="video"
+          form={form}
+          description={t(target + 'video.description')}
+          subDescription={t(target + 'video.subDescription')}
+          validation={{ required: t(errors + 'required') }}
+        />
 
         <div className="flex flex-col gap-2 pb-10 pt-1 items-center">
           <div className="flex flex-row items">

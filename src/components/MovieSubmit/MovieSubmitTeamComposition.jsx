@@ -130,11 +130,19 @@ function MovieSubmitTeamComposition({ form }) {
           title={t(target + 'director.birthdate.title')}
           form={form}
           validation={{
-            // valueAsDate: {
-            //   value: true,
-            //   message: "fkdjlksjf"
-            // },
             required: t(errors + 'required'),
+            validate: (value) => {
+              let now = Date.now();
+              value = Date.parse(value);
+              let age = new Date(now - value).getFullYear() - 1970;
+              if (age < 18) {
+                return t(errors + 'mustBeAdult');
+              }
+              return true;
+
+            },
+
+
           }}
         />
       </div>

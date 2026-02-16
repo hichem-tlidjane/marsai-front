@@ -168,9 +168,9 @@
   "submitMovieForm": {
     "page": {
       "titlePart1": "Appel à Projets 2026",
-      "titlePart2": "soumettre un film",
+      "titlePart2": "Soumettre un film",
       "paragraph": "Transmettez les éléments techniques, l'usage de l'IA et la composition de votre équipe. Tous les champs marqués d'une étoile (*) sont obligatoires.",
-      "submitButton": "finaliser ma soumission"
+      "submitButton": "Finaliser ma soumission"
     },
     "info": {
       "title": "01. Identité du film",
@@ -183,165 +183,166 @@
         "title": "Traduction anglaise"
       },
       "duration": {
-        "label": "Dureé exacte * (en secondes)",
-        "title": "Dureé exacte (en secondes)"
+        "label": "Durée exacte * (en secondes)",
+        "title": "Durée exacte (en secondes)"
       },
       "language": {
-        "label": "Langue parlée/Principale du film *",
+        "label": "Langue parlée/principale du film *",
         "placeholder": "Langue",
-        "title": "Langue parlée ou Principale du film"
+        "title": "Langue parlée ou principale du film"
       },
       "originalSynopsis": {
         "label": "Synopsis langue originale *",
         "placeholder": "Résumez l'intention de votre film et l'histoire qu'il raconte en quelques lignes...",
-        "title": "synopsis langue originale (max. 300 caractères)"
+        "title": "Synopsis langue originale (max. 300 caractères)"
       },
-
       "englishSynopsis": {
         "label": "Synopsis anglais *",
         "placeholder": "Traduction en anglais du synopsis",
-        "title": "synopsis anglais (max. 300 caractères)"
+        "title": "Synopsis anglais (max. 300 caractères)"
       }
     },
     "declaration": {
-      "title": "02. Déclaration Usage de l'IA",
-      "paragraph": "MARS.A.I exige une transparence totale sur l'utilisation de l'Intelligence Artificielle. Sélectionnez tous les outils génératifs sollicités dans votre processus créatif.",
+      "title": "02. Déclaration d'usage de l'IA",
+      "paragraph": "MARS.A.I exige une transparence totale sur l'utilisation de l'intelligence artificielle. Sélectionnez tous les outils génératifs sollicités dans votre processus créatif.",
       "isHybrid": {
-        "title": "Classification de l'Œuvre :* Choix exclusif entre :",
-        "false": ["Génération intégrale", "(100% IA)"],
+        "title": "Classification de l'œuvre :* Choix exclusif entre :",
+        "false": ["Génération intégrale", "(100 % IA)"],
         "true": ["Production hybride", "(Prises de vues réelles + apports IA)"]
       },
       "aiTools": {
-        "label": "Stack Technologique *",
-        "placeholder": "Listez les outils utilisés (ex: Midjourney pour les visuels, ElevenLabs pour les voix, Runway pour l'animation...)",
-        "title": "Stack Technologique (max. 500 caractères)"
+        "label": "Stack technologique *",
+        "placeholder": "Listez les outils utilisés (ex : Midjourney pour les visuels, ElevenLabs pour les voix, Runway pour l'animation...)",
+        "title": "Stack technologique (max. 500 caractères)"
       },
       "creativeProcess": {
-        "label": "Méthodologie Créative *",
-        "placeholder": "Décrivez l'interaction entre l'humain et la machine dans ce processus..",
-        "title": "Méthodologie Créative (max. 500 caractères)"
+        "label": "Méthodologie créative *",
+        "placeholder": "Décrivez l'interaction entre l'humain et la machine dans ce processus.",
+        "title": "Méthodologie créative (max. 500 caractères)"
       }
     },
     "deliverables": {
       "title": "03. Livrables & Accessibilité",
       "video": {
         "label": "Ajout du film *",
-        "title": "Ajout du film"
+        "title": "Ajout du film",
+        "description": "Cliquez pour uploader",
+        "subDescription": "MP4 ou MKV • Max 500 Mo"
       },
       "hasSubs": {
         "header": "Sous-titres (.srt)",
-        "label": "La video contient des sous titres incrustés",
-        "title": "Est-ce que la video contient des sous titres incrustés"
+        "label": "La vidéo contient des sous-titres incrustés",
+        "title": "Est-ce que la vidéo contient des sous-titres incrustés"
       },
       "coverImage": {
-        "header": "Vignette Officielle (16:9) *",
-        "label": "Vignette Officielle (16:9) *",
-        "description": "Cliquez pour upload",
-        "subDescription": "PNG ou JPG • Max 15Mo"
+        "header": "Vignette officielle (16:9) *",
+        "label": "Vignette officielle (16:9) *",
+        "description": "Cliquez pour uploader",
+        "subDescription": "PNG ou JPG • Max 15 Mo"
       },
       "stills": {
-        "header": "Galerie Médias (Stills - Max 3)",
-        "stillA": "Galerie Médias premiere image",
-        "stillB": "Galerie Médias deuxieme image",
-        "stillC": "Galerie Médias troisieme image"
+        "header": "Galerie médias (stills - max. 3)",
+        "stillA": "Galerie médias première image",
+        "stillB": "Galerie médias deuxième image",
+        "stillC": "Galerie médias troisième image"
       }
     },
     "teamComposition": {
-      "title": "04. Composition de l'Équipe",
+      "title": "04. Composition de l'équipe",
       "director": {
-        "header": "Realisateur:",
+        "header": "Réalisateur :",
         "gender": {
-          "label": "civilité *",
-          "mr": "Mr.",
-          "mrs": "Mme.",
-          "mx": "Mx."
+          "label": "Civilité *",
+          "mr": "M.",
+          "mrs": "Mme",
+          "mx": "Mx"
         },
         "firstname": {
-          "label": "Prenom *",
-          "placeholder": "Prenom",
-          "title": "Prenom du realisateur"
+          "label": "Prénom *",
+          "placeholder": "Prénom",
+          "title": "Prénom du réalisateur"
         },
         "lastname": {
           "label": "Nom *",
           "placeholder": "Nom",
-          "title": "Nom du realisateur"
+          "title": "Nom du réalisateur"
         },
         "job": {
-          "label": "métier actuel *",
-          "title": "métier actuel du realisateur"
+          "label": "Métier actuel *",
+          "title": "Métier actuel du réalisateur"
         },
         "birthdate": {
-          "label": "date de naissance *",
-          "title": "date de naissance du realisateur"
+          "label": "Date de naissance *",
+          "title": "Date de naissance du réalisateur"
         },
         "email": {
-          "label": "email *",
+          "label": "Email *",
           "placeholder": "exemple@gmail.com",
-          "title": "email du realisateur"
+          "title": "Email du réalisateur"
         },
         "phone": {
-          "label": "Telephone *",
+          "label": "Téléphone *",
           "placeholder": "0102030405",
-          "title": "Numero de telephone du realisateur"
+          "title": "Numéro de téléphone du réalisateur"
         },
         "address": {
-          "label": "Addresse *",
-          "title": "Addresse postale du directeur"
+          "label": "Adresse *",
+          "title": "Adresse postale du réalisateur"
         },
         "city": {
           "label": "Ville *",
-          "title": "Ville du directeur"
+          "title": "Ville du réalisateur"
         },
         "zipcode": {
-          "label": "Code Postal",
-          "title": "Code Postal du realisateur"
+          "label": "Code postal",
+          "title": "Code postal du réalisateur"
         },
         "region": {
-          "label": "Region",
-          "title": "Region du directeur"
+          "label": "Région",
+          "title": "Région du réalisateur"
         },
         "country": {
           "label": "Pays *",
-          "title": "Pays du realisateur"
+          "title": "Pays du réalisateur"
         },
-        "socials": "Présence en ligne:",
+        "socials": "Présence en ligne :",
         "facebook": {
           "label": "Facebook",
-          "title": "facebook du directeur"
+          "title": "Facebook du réalisateur"
         },
         "instagram": {
           "label": "Instagram",
-          "title": "instagram du realisateur"
+          "title": "Instagram du réalisateur"
         },
         "youtube": {
-          "label": "Youtube",
-          "title": "Youtube du directeur"
+          "label": "YouTube",
+          "title": "YouTube du réalisateur"
         },
         "linkedin": {
           "label": "LinkedIn",
-          "title": "Linkedin du directeur"
+          "title": "LinkedIn du réalisateur"
         },
         "twitter": {
           "label": "Twitter",
-          "title": "twitter du directeur"
+          "title": "Twitter du réalisateur"
         }
       },
       "collaborators": {
-        "header": "Collaborateurs:",
-        "button": "+ ajouter collaborateur"
+        "header": "Collaborateurs :",
+        "button": "+ Ajouter collaborateur"
       },
       "newCollaborator": {
         "remove": "Retirer le collaborateur",
         "gender": {
-          "label": "civilité *",
-          "mr": "Mr.",
-          "mrs": "Mme.",
-          "mx": "Mx."
+          "label": "Civilité *",
+          "mr": "M.",
+          "mrs": "Mme",
+          "mx": "Mx"
         },
         "firstname": {
-          "label": "Prenom *",
-          "placeholder": "Prenom",
-          "title": "Prenom du collaborateur"
+          "label": "Prénom *",
+          "placeholder": "Prénom",
+          "title": "Prénom du collaborateur"
         },
         "lastname": {
           "label": "Nom *",
@@ -353,32 +354,33 @@
           "title": "Contribution du collaborateur"
         },
         "email": {
-          "label": "email *",
+          "label": "Email *",
           "placeholder": "exemple@gmail.com",
-          "title": "email du collaborateur"
+          "title": "Email du collaborateur"
         }
       }
     },
     "certificate": {
-      "title": "Certificat de Propriété",
+      "title": "Certificat de propriété",
       "paragraph": "En soumettant ce dossier, vous certifiez sur l'honneur être l'auteur original de l'œuvre et détenir l'intégralité des droits de diffusion. Vous acceptez que MARS.A.I utilise ces éléments pour la promotion du festival."
     },
     "formErrors": {
       "required": "Ce champ est obligatoire",
       "requiredRadio": "Veuillez choisir une option",
-      "minLength3": "Au moins 3 caracteres",
-      "minLength5": "Au moins 5 caracteres",
-      "maxLength20": "Maximum 20 caracteres",
-      "maxLength50": "Maximum 50 caracteres",
-      "maxLength100": "Maximum 100 caracteres",
-      "maxLength255": "Maximum 255 caracteres",
-      "maxLength300": "Maximum 300 caracteres",
-      "maxLength500": "Maximum 500 caracteres",
-      "validPhone": "Entrez le numero sans espace ni separateur",
+      "minLength3": "Au moins 3 caractères",
+      "minLength5": "Au moins 5 caractères",
+      "maxLength20": "Maximum 20 caractères",
+      "maxLength50": "Maximum 50 caractères",
+      "maxLength100": "Maximum 100 caractères",
+      "maxLength255": "Maximum 255 caractères",
+      "maxLength300": "Maximum 300 caractères",
+      "maxLength500": "Maximum 500 caractères",
+      "validPhone": "Entrez le numéro sans espace ni séparateur",
       "validEmail": "Entrez un email valide",
       "digitsOnly": "Chiffres uniquement",
       "minDuration": "Minimum 1 sec",
-      "maxDuration": "Maximum 90 sec"
+      "maxDuration": "Maximum 90 sec",
+      "mustBeAdult": "Minimum 18 ans pour participer."
     }
   }
 }

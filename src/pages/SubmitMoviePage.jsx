@@ -38,7 +38,7 @@ function SubmitMoviePage() {
       });
       const data = await res.json();
       if (res.ok) {
-        console.log();
+        console.log(data);
       } else {
         console.log(data);
       }
