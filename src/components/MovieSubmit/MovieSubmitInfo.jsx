@@ -3,6 +3,7 @@ import BasicFormInput from './base/BasicFormInput';
 import FormSection from './base/FormSection';
 import FormSectionTitle from './base/FormSectionTitle';
 import FormTextArea from './base/FormTextArea';
+import LanguagePicker from './base/LanguagePicker';
 
 function MovieSubmitInfo({ form }) {
   const { t } = useTranslation();
@@ -81,7 +82,20 @@ function MovieSubmitInfo({ form }) {
           }}
         />
 
-        <BasicFormInput
+
+        <LanguagePicker
+          label={t(target + 'language.label')}
+          id="form-language"
+          title={t(target + 'language.title')}
+          form={form}
+          name="language"
+          validation={{
+            required: t(errors + 'required'),
+          }}
+
+
+        />
+        {/* <BasicFormInput
           label={t(target + 'language.label')}
           id="form-language"
           placeholder={t(target + 'language.placeholder')}
@@ -91,7 +105,7 @@ function MovieSubmitInfo({ form }) {
           validation={{
             required: t(errors + 'required'),
           }}
-        />
+        /> */}
       </div>
 
       <div className="flex flex-col items-center w-full md:flex-row md:justify-between md:gap-20">
