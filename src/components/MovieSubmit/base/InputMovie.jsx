@@ -15,7 +15,6 @@ function InputMovie({
   const { t } = useTranslation();
   const target = 'submitMovieForm.deliverables.video.';
 
-
   const [preview, setPreview] = useState(null);
   const { register, resetField } = form;
 
@@ -23,12 +22,7 @@ function InputMovie({
     validation = { required: false };
   }
 
-
-  const {
-    onChange: onFormChange,
-    onBlur,
-    ref,
-  } = register('video', validation);
+  const { onChange: onFormChange, onBlur, ref } = register('video', validation);
 
   function handlePreview(e) {
     onFormChange(e);

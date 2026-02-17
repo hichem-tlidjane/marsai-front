@@ -82,7 +82,6 @@ function MovieSubmitInfo({ form }) {
           }}
         />
 
-
         <LanguagePicker
           label={t(target + 'language.label')}
           id="form-language"
@@ -92,8 +91,6 @@ function MovieSubmitInfo({ form }) {
           validation={{
             required: t(errors + 'required'),
           }}
-
-
         />
         {/* <BasicFormInput
           label={t(target + 'language.label')}

@@ -23,10 +23,10 @@ function Login() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
+        credentials: 'include',
       });
       if (res.ok) {
-        const data = await res.json();
-        localStorage.setItem('accessToken', data.accessToken);
+        // const data = await res.json();
         navigate('/');
       } else {
         setError(t('login.errors.invalidCredentials'));

@@ -25,6 +25,7 @@ function Navbar() {
       { id: 2, url: '/movies', text: t('navbar.gallery') },
       { id: 3, url: '/programme-info', text: t('navbar.programmeInfo') },
       { id: 4, url: '/jury', text: t('navbar.jury') },
+      { id: 5, url: '/admin', text: t('navbar.admin') },
     ],
   };
   const navbarToggleHandler = () => {
