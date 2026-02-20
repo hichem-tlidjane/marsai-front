@@ -3,6 +3,7 @@ import { RiDashboard3Line } from 'react-icons/ri';
 import { BiMoviePlay } from 'react-icons/bi';
 import { FaCalendarAlt, FaUser } from 'react-icons/fa';
 import { FaRankingStar } from 'react-icons/fa6';
+import { IoMdMail } from 'react-icons/io';
 
 function AdminPage() {
   const linkClass = ({ isActive }) =>
@@ -31,6 +32,10 @@ function AdminPage() {
           <NavLink className={linkClass} to="/admin/events">
             <FaCalendarAlt className="size-5" />
             évènements
+          </NavLink>
+          <NavLink className={linkClass} to="/admin/newsletter">
+            <IoMdMail className="size-5" />
+            newsletter
           </NavLink>
         </nav>
       </div>

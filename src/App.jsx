@@ -11,6 +11,7 @@ import JuryManager from './components/admin/JuryManager';
 import LeaderboardManager from './components/admin/LeaderboardManager';
 import EventsManager from './components/admin/EventsManager';
 import PublicLayout from './components/PublicLayout';
+import Newsletter from './components/admin/Newsletter';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="jury" element={<JuryManager />} />
           <Route path="leaderboard" element={<LeaderboardManager />} />
           <Route path="events" element={<EventsManager />} />
+          <Route path="newsletter" element={<Newsletter />} />
         </Route>
       </Routes>
     </div>
