@@ -32,7 +32,7 @@ function SubmitMoviePage() {
     }
 
     try {
-      const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + 'movies', {
+      const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + '/movies', {
         method: 'POST',
         body: formData,
       });

@@ -24,7 +24,7 @@ function MovieCard({ data }) {
       <div className="relative">
         <img
           className={`aspect-video w-full  object-contain rounded-t-xl bg-dark`}
-          src={import.meta.env.VITE_SERVER_ADDRESS + data.cover_path}
+          src={import.meta.env.VITE_SERVER_ADDRESS + "/" + data.cover_path}
         />
         <span
           className=" bg-secondary

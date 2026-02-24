@@ -31,7 +31,7 @@ function GalleryPage() {
         }
         const res = await fetch(
           import.meta.env.VITE_SERVER_ADDRESS +
-          'movies/?page=' +
+          '/movies/?page=' +
           page +
           '&type=' +
           type +

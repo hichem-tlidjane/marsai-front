@@ -19,7 +19,7 @@ function Login() {
   async function onSubmit(data) {
     setError(null);
     try {
-      const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + 'auth/login', {
+      const res = await fetch(import.meta.env.VITE_SERVER_ADDRESS + '/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
