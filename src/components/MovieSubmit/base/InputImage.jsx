@@ -2,6 +2,7 @@ import { IoImageOutline } from 'react-icons/io5';
 import { useState, useEffect } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import FormErrors from './FormErrors';
+import { useTranslation } from 'react-i18next';
 
 function InputImage({
   label,
@@ -11,21 +12,32 @@ function InputImage({
   description,
   subDescription,
   validation = false,
+  maxSize = 0,
   iconSize = 40,
   className = '',
+  errorClassName = ''
 }) {
+  const { t } = useTranslation();
   const [preview, setPreview] = useState(null);
   const { register, resetField } = form;
+  const errors = 'submitMovieForm.formErrors.';
+  const [error, setError] = useState("");
 
   if (!validation) {
     validation = { required: false };
   }
 
-  const { onChange: onFormChange, onBlur, ref } = register(name, validation);
+  const { onChange: onFormChange, ref } = register(name, validation);
 
   function handlePreview(e) {
+    setError("");
     onFormChange(e);
     const file = e.target.files[0];
+    if (file.size > maxSize * 1024 * 1024) {
+      resetField(name);
+      setError(t(errors + 'maxSize15MB'));
+      return;
+    }
     if (file) {
       const objectUrl = URL.createObjectURL(file);
       setPreview(objectUrl);
@@ -73,7 +85,7 @@ function InputImage({
               id={id}
               name={name}
               ref={ref}
-              onBlur={onBlur}
+              onBlur={() => setError("")}
               onChange={handlePreview}
               accept="image/*"
               aria-label={label}
@@ -91,7 +103,7 @@ function InputImage({
           </div>
         </label>
       )}
-
+      <div className={`absolute text-red-500 ${errorClassName}`}> {error}</div>
       <FormErrors form={form} name={name} />
     </>
   );

@@ -228,7 +228,7 @@
         "label": "Ajout du film *",
         "title": "Ajout du film",
         "description": "Cliquez pour uploader",
-        "subDescription": "MP4 ou MKV • Max 500 Mo"
+        "subDescription": "MP4 ou MKV • Max 300 Mo"
       },
       "hasSubs": {
         "header": "Sous-titres (.srt)",
@@ -381,7 +381,9 @@
       "digitsOnly": "Chiffres uniquement",
       "minDuration": "Minimum 1 sec",
       "maxDuration": "Maximum 90 sec",
-      "mustBeAdult": "Minimum 18 ans pour participer."
+      "mustBeAdult": "Minimum 18 ans pour participer.",
+      "maxSize15MB" : "Taille de fichier maximale 15Mo",
+      "maxSize300MB": "Taille de fichier maximale 300Mo"
     }
   },
   "gallery": {

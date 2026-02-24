@@ -18,6 +18,7 @@ function MovieSubmitDeliverables({ form }) {
           id="form-movie-upload"
           name="video"
           form={form}
+          maxSize={300}
           description={t(target + 'video.description')}
           subDescription={t(target + 'video.subDescription')}
           validation={{ required: t(errors + 'required') }}
@@ -42,25 +43,29 @@ function MovieSubmitDeliverables({ form }) {
       </div>
 
       <div className="w-5/6 flex flex-col justify-center md:flex-row md:justify-evenly gap-6">
-        <div className="flex flex-col justify-center items-center gap-3 w-full">
+        <div className="relative flex flex-col justify-center items-center gap-3 w-full">
           <p className="">{t(target + 'coverImage.header')}</p>
           <InputImage
             className="aspect-video w-full max-w-sm object-scale-down"
+            errorClassName='sm:right-35 sm:top-65 right-15 top-60'
             label={t(target + 'coverImage.label')}
             id="poster"
             name="coverImage"
             iconSize={80}
+            maxSize={15}
             description={t(target + 'coverImage.description')}
             subDescription={t(target + 'coverImage.subDescription')}
             form={form}
             validation={{ required: t(errors + 'required') }}
           />
         </div>
-        <div className="flex flex-col items-center gap-3 w-full">
+        <div className="relative flex flex-col items-center gap-3 w-full">
           <p>{t(target + 'stills.header')}</p>
           <div className="flex justify-center items-center gap-3">
             <InputImage
               className="aspect-3/4 w-20 justify-center object-cover"
+              errorClassName='sm:right-31 sm:top-38 right-15 top-38'
+              maxSize={15}
               label={t(target + 'stills.stillA')}
               id="still-image-a"
               name="stillImageA"
@@ -68,6 +73,8 @@ function MovieSubmitDeliverables({ form }) {
             />
             <InputImage
               className="aspect-3/4 w-20 justify-center object-cover"
+              errorClassName='sm:right-31 sm:top-38 right-15 top-38'
+              maxSize={15}
               label={t(target + 'stills.stillB')}
               id="still-image-b"
               name="stillImageB"
@@ -75,6 +82,8 @@ function MovieSubmitDeliverables({ form }) {
             />
             <InputImage
               className="aspect-3/4 w-20 justify-center object-cover"
+              errorClassName='sm:right-31 sm:top-38 right-15 top-38'
+              maxSize={15}
               label={t(target + 'stills.stillC')}
               id="still-image-c"
               name="stillImageC"

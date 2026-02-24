@@ -10,23 +10,32 @@ function InputMovie({
   form,
   description,
   subDescription,
+  maxSize = 0,
   validation = false,
 }) {
   const { t } = useTranslation();
   const target = 'submitMovieForm.deliverables.video.';
+  const errors = 'submitMovieForm.formErrors.';
 
   const [preview, setPreview] = useState(null);
+  const [error, setError] = useState("");
   const { register, resetField } = form;
 
   if (!validation) {
     validation = { required: false };
   }
 
-  const { onChange: onFormChange, onBlur, ref } = register('video', validation);
+  const { onChange: onFormChange, ref } = register(name, validation);
 
   function handlePreview(e) {
+    setError("");
     onFormChange(e);
     const file = e.target.files[0];
+    if (file.size > maxSize * 1024 * 1024) {
+      resetField(name);
+      setError(t(errors + 'maxSize300MB'));
+      return;
+    }
     if (file) {
       const objectUrl = URL.createObjectURL(file);
       setPreview(objectUrl);
@@ -84,16 +93,17 @@ function InputMovie({
               id={id}
               name={name}
               ref={ref}
-              onBlur={onBlur}
+              onBlur={() => setError("")}
               onChange={handlePreview}
               accept="video/*"
               title={t(target + 'title')}
             ></input>
           </label>
-        </div>
-      )}
-
-      <FormErrors className="self-center" form={form} name={'video'} />
+        </div >
+      )
+      }
+      <div className="self-center text-red-500 "> {error}</div>
+      <FormErrors className="self-center" form={form} name={name} />
     </>
   );
 }

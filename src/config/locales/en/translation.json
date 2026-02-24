@@ -230,8 +230,8 @@
       "video": {
         "label": "Upload the film",
         "title": "Upload the film",
-        "description": "Click to uploqd",
-        "subDescription": "MP4 or MKV • Max 500MB"
+        "description": "Click to upload",
+        "subDescription": "MP4 or MKV • Max 300 MB"
       },
       "hasSubs": {
         "header": "Subtitles (.srt)",
@@ -384,7 +384,9 @@
       "digitsOnly": "Digits only",
       "minDuration": "Minimum 1 sec",
       "maxDuration": "Maximum 90 sec",
-      "mustBeAdult": "You must be 18 to participate."
+      "mustBeAdult": "You must be 18 to participate.",
+      "maxSize15MB" : "Maximum file size 15MB",
+      "maxSize300MB": "Maximum file size 300MB"
     }
   },
     "gallery": {
