@@ -32,7 +32,7 @@ function Login() {
       );
       if (res.ok) {
         const user = await res.json();
-        localStorage.setItem('user', user);
+        localStorage.setItem('user', JSON.stringify(user));
         authStore.setUser(user);
         navigate('/');
       } else {
