@@ -26,16 +26,17 @@ function App() {
   const { setUser, isInit } = useAuthStore();
 
   useEffect(() => {
-    const refresh = async () => {
-      const res = await api('/auth/me', null, false);
-      if (res?.ok) {
-        const user = await res.json();
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-    };
-    refresh();
+    setUser(localStorage.getItem('user'));
+    // const refresh = async () => {
+    //   const res = await api('/auth/me', null, false);
+    //   if (res?.ok) {
+    //     const user = await res.json();
+    //     setUser(user);
+    //   } else {
+    //     setUser(null);
+    //   }
+    // };
+    // refresh();
   }, []);
 
   if (!isInit) {
