@@ -57,8 +57,10 @@ function App() {
           <Route path="/movies" element={<GalleryPage />} />
           <Route path="/submit" element={<SubmitMoviePage />} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/events/:id" element={<EventBookingPage />} />
+          <Route element={<ProtectedRoute mustBeUnlogged={true} />}>
+            <Route path="/login" element={<Login />} />
+          </Route>
         </Route>
         <Route element={<ProtectedRoute allowedRole="admin" />}>
           <Route path="/admin" element={<AdminPage />}>

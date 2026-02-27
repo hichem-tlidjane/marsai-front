@@ -1,7 +1,7 @@
 import { IoIosArrowBack } from 'react-icons/io';
 import { IoIosArrowForward } from 'react-icons/io';
 
-function PaginationMenu({ page, setPage, total, perPage = 20 }) {
+function PaginationMenu({ page, setPage, total, perPage = 5 }) {
   function incrementPage() {
     setPage(page + 1);
   }

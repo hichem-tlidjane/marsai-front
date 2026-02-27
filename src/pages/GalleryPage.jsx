@@ -12,23 +12,20 @@ function GalleryPage() {
   const { t } = useTranslation();
   const target = 'gallery.page.';
   const [page, setPage] = useState(1);
-  const [isPageChange, setIsPageChange] = useState(false);
   const [total, setTotal] = useState(0);
   const [type, setType] = useState('all');
   const [search, setSearch] = useState('');
   const [movieData, setMovieData] = useState([]);
+
   const debounced = useDebouncedCallback(e => {
+    if (search === e) return;
     setSearch(e);
-    setIsPageChange(false);
+    setPage(1);
   }, 500);
 
   useEffect(() => {
     async function getMovieData() {
       try {
-        if (!isPageChange) {
-          setPage(1);
-          setIsPageChange(true);
-        }
         const res = await fetch(
           import.meta.env.VITE_SERVER_ADDRESS +
             '/movies/?page=' +
@@ -55,7 +52,7 @@ function GalleryPage() {
       }
     }
     getMovieData();
-  }, [page, type, search, isPageChange]);
+  }, [type, search, page]);
 
   return (
     <>
@@ -67,7 +64,10 @@ function GalleryPage() {
             <strong className="text-accent">{t(target + 'titlePart2')}</strong>
           </TitlePage>
           <p className="text-dark mb-12 max-w-md">{t(target + 'paragraph')}</p>
-          <form className="flex flex-row gap-6 mb-12" action="">
+          <form
+            className="flex flex-row gap-6 mb-12"
+            onSubmit={e => e.preventDefault()}
+          >
             <div className="flex-1 text-dark">
               <label htmlFor="type" hidden>
                 {t(target + 'videoClassification')}
@@ -77,7 +77,7 @@ function GalleryPage() {
                 className="w-full bg-secondary px-2 py-2 rounded-md outline-2 outline-neutral-400 focus:outline-neutral-100"
                 onChange={e => {
                   setType(e.target.value);
-                  setIsPageChange(false);
+                  setPage(1);
                 }}
                 name="type"
                 id="type"
@@ -110,12 +110,7 @@ function GalleryPage() {
             ))}
           </div>
           <div className="text-white flex items-center justify-center">
-            <PaginationMenu
-              total={total}
-              page={page}
-              setPage={setPage}
-              setIsPageChange={setIsPageChange}
-            />
+            <PaginationMenu total={total} page={page} setPage={setPage} />
           </div>
         </div>
       </section>
