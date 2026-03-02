@@ -8,7 +8,7 @@ export const useFormatDate = () => {
     const date = new Date(dateStr);
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
     const formattedDate = date.toLocaleDateString(i18n.language, options);
-    return `${t('conference.program.datePrefix')}${formattedDate}`;
+    return `${t('events.conference.program.datePrefix')}${formattedDate}`;
   };
 
   const formatTime = dateStr => {
