@@ -23,7 +23,10 @@ import MoviePage from './pages/MoviePage';
 import JuryRegisterPage from './pages/JuryRegisterPage';
 import AdminMovieTest from './pages/AdminMovieTest';
 import EditMoviePage from './pages/EditMoviePage';
-import MoviesManagerJury from './pages/MoviesManagerJury';
+import JuryListPage from './pages/JuryListPage';
+import JuryPage from './pages/JuryPage';
+import JuryMoviesPage from './pages/JuryMoviesPage';
+import JuryRatingPage from './pages/JuryRatingPage';
 import { AuthContext } from './context/AuthContext';
 
 function App() {
@@ -47,7 +50,9 @@ function App() {
             path="/bookings/unsubscribe/:token"
             element={<UnsubscribePage />}
           />
+          <Route path="/jury" element={<JuryListPage />} />
         </Route>
+
         <Route element={<ProtectedRoute allowedRole="admin" />}>
           <Route path="/admin" element={<AdminPage />}>
             <Route index element={<Navigate to="dashboard" replace />} />
@@ -61,9 +66,12 @@ function App() {
         </Route>
 
         <Route element={<ProtectedRoute allowedRole="jury" />}>
-          <Route path="/jury" element={<MoviesManagerJury />} />
+          <Route path="/jury/dashboard" element={<JuryPage />}>
+            <Route index element={<Navigate to="movies" replace />} />
+            <Route path="movies" element={<JuryMoviesPage />} />
+            <Route path="movies/:id/ratings" element={<JuryRatingPage />} />
+          </Route>
         </Route>
-        
       </Routes>
     </div>
   );
